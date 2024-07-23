@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0}
+        .div {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 1fr 3fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas:
+                'h h h h h'
+                'n s p m a'
+                'f f f f f'
+
+        ;
+        }
+        header {
+            grid-area: h;
+            background-color: #d37f7f;
+        }
+
+        footer {
+            grid-area: f;
+            background-color: #dc5252;
+        }
+
+        nav {
+            grid-area: n;
+            background-color: #9f1414;
+        }
+
+        main {
+            grid-area: m;
+            background-color: #711414;
+        }
+
+        aside {
+            grid-area: a;
+            background-color: #3a0808;
+        }
+
+        .part {
+            grid-area: p;
+            background-color: #250606;
+        }
+
+        section {
+            grid-area: s;
+            background-color: #190101;
+        }
+/*хотів написати 428 пікселів як в фігмі але у мене так вузько сжати на ноуті не можна, тому залишив 600*/
+        @media screen and (max-width: 600px) {
+            .div {
+                display: grid;
+                height: 100vh;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+                grid-template-areas:
+                        'h h'
+                        'n a'
+                        'm p'
+                        's s'
+                        'f f'
+            ;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="div">
+    <header></header>
+    <nav></nav>
+    <main></main>
+    <aside></aside>
+    <section></section>
+    <div class="part"></div>
+    <footer></footer>
+</div>
+</body>
+</html>

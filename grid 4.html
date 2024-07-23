@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .div {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 2fr 2fr 1fr 1fr 2fr 2fr;
+            grid-template-columns: 4fr 1fr;
+            grid-template-areas:
+        'header header'
+        'section aside'
+        'part aside'
+        'part main'
+        'nav main'
+        'footer footer';
+        }
+
+        header {
+            grid-area: header;
+            background-color: coral;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: darkslategrey;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        section {
+            grid-area: section;
+            background-color: #34345a;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: hotpink;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        aside {
+            grid-area: aside;
+            background-color: saddlebrown;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        main {
+            grid-area: main;
+            background-color: greenyellow;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+        .part {
+            grid-area: part;
+            background-color: crimson;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="div">
+    <header><p>header</p></header>
+    <section><p>content-1</p></section>
+    <div class="part"><p>content-2</p></div>
+    <main><p>content-3</p></main>
+    <aside><p>spam-1</p></aside>
+    <nav><p>spam-2</p></nav>
+    <footer>footer</footer>
+
+</div>
+</body>
+<body>
+
+</body>
+</html>

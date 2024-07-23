@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+
+        }
+
+        .div {
+            display: grid;
+            height: 100vh;
+            grid-template-rows: 2fr 3fr 3fr 2fr;
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-areas:
+        'header header header'
+        'section nav aside'
+        'section main aside'
+        'footer footer footer';
+        }
+
+        header {
+            grid-area: header;
+            background-color: coral;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: darkslategrey;
+        }
+
+        section {
+            grid-area: section;
+            background-color: saddlebrown;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: hotpink;
+        }
+        aside{grid-area: aside;
+            background-color: saddlebrown;}
+        main{grid-area: main;
+            background-color: greenyellow;}
+
+    </style>
+</head>
+<body>
+<div class="div">
+    <header></header>
+    <nav></nav>
+    <section></section>
+    <aside></aside>
+    <main></main>
+    <footer></footer>
+</div>
+</body>
+</html>
